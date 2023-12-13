@@ -40,7 +40,7 @@ async def main():
             for page_num in range(1, max_pages + 1):
                 brand, product_name, prices = await parse_catalog_page(session, base_url, page_num)
                 for i in range(len(prices)):
-                    print(f"{brand[i]} {product_name[i]}: {prices[i]}")
+                    print(f'{brand[i]} {product_name[i]}: {prices[i]}')
 
         sys.stdout = sys.__stdout__
 
